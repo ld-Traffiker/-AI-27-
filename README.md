@@ -19,29 +19,19 @@ In [ ]:
 执行一次就行了，之后可直接跳到后面的参数配置及训练
 
 In [ ]:
-
-import sys
-
-sys.path.append("PaddleSeg")
-
-import paddleseg
-
-import paddle
-
-import numpy as np
-
-import os
-
-import matplotlib.pyplot as plt
-
-from PIL import Image
-
-from tqdm import tqdm
-
-import random
+    import sys
+    sys.path.append("PaddleSeg")
+    import paddleseg
+    import paddle
+    import numpy as np
+    import os
+    import matplotlib.pyplot as plt
+    from PIL import Image
+    from tqdm import tqdm
+    import random
 
 #设置随机数种子
-random.seed(2021)
+    random.seed(2021)
 
 In [ ]:
 def write_txt(file_name, imgs_path, labels_path=None, mode='train', val_pro=0.2):
