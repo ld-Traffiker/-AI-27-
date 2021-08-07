@@ -3,16 +3,21 @@
 ## 项目描述
 In [ ]:
 #解压一下略小改之后的PaddleSeg，解压一次就可以注释掉了
+
 !unzip -oq /home/aistudio/PaddleSeg.zip
+
 In [ ]:
 #解压数据集至data/目录
+
 !unzip -qo data/data95249/train_50k_mask.zip -d data/
 !unzip -oq data/data100087/B榜测试数据集.zip -d data/
 !unzip -oq data/data95249/train_image.zip -d data/
+
 数据集划分
 执行一次就行了，之后可直接跳到后面的参数配置及训练
 
 In [ ]:
+
 import sys
 sys.path.append("PaddleSeg")
 import paddleseg
@@ -23,8 +28,10 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from tqdm import tqdm
 import random
+
 #设置随机数种子
 random.seed(2021)
+
 In [ ]:
 def write_txt(file_name, imgs_path, labels_path=None, mode='train', val_pro=0.2):
     assert mode=="train" or mode=="test", "ERROR:mode must be train or test."
