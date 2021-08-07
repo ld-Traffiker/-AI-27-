@@ -131,8 +131,6 @@ In [ ]:
 已在PaddleSeg中的\paddleseg\core\predict.py做了修改,增加了单通道label图像，保存在results路径，可以直接预测出结果
 
 
-#推理
-
     !python PaddleSeg/predict.py --config my_deeplabv3.yml --model_path output_deeplabv3_1/best_model/model.pdparams --image_path data/test_image --save_dir output/result_1 #--aug_pred --flip_horizontal --flip_vertical
 压缩结果，提交文件
 第三届中国AI+创新创业大赛：半监督学习目标定位竞赛
@@ -149,7 +147,14 @@ In [ ]:
 
 ## 代码
 ```
+主要用到paddle的paddleseg代码进行更改
+
+1.更改了损失函数，去掉了paddleseg\models\losses\cross_entropy_loss.py中的coef计算
+2.在dataset中更改了标签数，加入了class_idx
+3.在transforms中把输入的lables_dims[axis]更改为1
+
 在上传的paddleseg.zip中，加入data和mdel可直接运行
+model可以从下面链接提取  链接：https://pan.baidu.com/s/17lOWJbHN-FtxFGNhwCwpAw   提取码：61t0
 ```
 ## 使用方式
 A：在AI Studio上[运行本项目](https://aistudio.baidu.com/aistudio/usercenter)
