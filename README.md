@@ -10,7 +10,9 @@ In [ ]:
 #解压数据集至data/目录
 
 !unzip -qo data/data95249/train_50k_mask.zip -d data/
+
 !unzip -oq data/data100087/B榜测试数据集.zip -d data/
+
 !unzip -oq data/data95249/train_image.zip -d data/
 
 数据集划分
@@ -19,14 +21,23 @@ In [ ]:
 In [ ]:
 
 import sys
+
 sys.path.append("PaddleSeg")
+
 import paddleseg
+
 import paddle
+
 import numpy as np
+
 import os
+
 import matplotlib.pyplot as plt
+
 from PIL import Image
+
 from tqdm import tqdm
+
 import random
 
 #设置随机数种子
