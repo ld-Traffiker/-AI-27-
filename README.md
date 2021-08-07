@@ -18,7 +18,7 @@ In [ ]:
 数据集划分
 执行一次就行了，之后可直接跳到后面的参数配置及训练
 
-In [ ]:
+
     import sys
     sys.path.append("PaddleSeg")
     import paddleseg
@@ -33,7 +33,7 @@ In [ ]:
 #设置随机数种子
     random.seed(2021)
 
-In [ ]:
+
 def write_txt(file_name, imgs_path, labels_path=None, mode='train', val_pro=0.2):
     assert mode=="train" or mode=="test", "ERROR:mode must be train or test."
     if mode!="test":
