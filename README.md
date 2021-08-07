@@ -25,7 +25,7 @@ B榜测试数据集包括10,989幅无标注的图像。
 本次比赛使用loU曲线作为评价指标，即利用预测的目标的定位概率图，计算不同阈值下预测结果与真实目标之间的IoU分数，最后取一个最高点作为最终的分数。在理想状态下，loU曲线最高值接近1.0,对应的阈值为255,因为阈值越高，目标对象与背景的对比度越高。
 
 
-## 代码
+## 模型构建
 ```
 主要用到paddle的paddleseg代码进行更改
 
@@ -160,5 +160,5 @@ create_txt(data_root, train_imgs_dir, train_labels_dir, test_dir, val_pro=0.2)
 等等
 ```
 ## 使用方式
-A：在AI Studio上[运行本项目](https://aistudio.baidu.com/aistudio/usercenter)
+A：在AI Studio上[运行本项目](https://aistudio.baidu.com/aistudio/projectdetail/2247720)
 B：此处由项目作者进行撰写使用方式。
